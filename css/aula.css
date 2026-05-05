@@ -42,7 +42,7 @@ body {
   transition: transform 0.2s ease;
 }
 
-..back-button:hover {
+.back-button:hover {
   transform: translateY(-1px);
 }
 
