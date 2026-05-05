@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula - JavaScript e DOM</title>
+
+  <!-- LINK DO CSS -->
+  <link rel="stylesheet" href="../css/aula.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="back-button" href="index.html">← Voltar</a>
+    <span class="page-title">Aula 1: JavaScript e DOM</span>
+  </header>
+
+  <main class="container">
+
+    <h1>Introdução ao JavaScript e DOM</h1>
+
+    <section>
+      <h2> Objetivo</h2>
+      <div class="card">
+        <p>Nesta aula você vai entender como o JavaScript funciona no navegador e como ele interage com a página.</p>
+        <p>Também vai aprender a modificar elementos e responder às ações do usuário.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2> O que é o DOM?</h2>
+      <div class="card">
+        <p>O DOM é a representação da página que o navegador cria a partir do HTML.</p>
+        <p>Ele organiza tudo em uma estrutura que pode ser manipulada pelo JavaScript.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2> HTML, CSS e JavaScript</h2>
+      <div class="card">
+        <p>HTML define a estrutura.</p>
+        <p>CSS cuida do visual.</p>
+        <p>JavaScript adiciona comportamento.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2> Acessando elementos</h2>
+      <div class="card">
+        <p>Exemplo de acesso:</p>
+
+        <pre><code>
+document.getElementById("meuElemento");
+        </code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2> Eventos</h2>
+      <div class="card">
+        <p>Eventos são ações do usuário, como cliques:</p>
+
+        <pre><code>
+elemento.addEventListener("click", function() {
+  alert("Você clicou!");
+});
+        </code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2> Alterando conteúdo</h2>
+      <div class="card">
+        <p>Podemos mudar textos e estilos:</p>
+
+        <pre><code>
+elemento.innerText = "Novo texto";
+elemento.style.color = "red";
+        </code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2> Classes e estados</h2>
+      <div class="card">
+        <p>Também é possível trabalhar com classes:</p>
+
+        <pre><code>
+elemento.classList.add("ativa");
+elemento.classList.remove("bloqueada");
+        </code></pre>
+      </div>
+    </section>
+
+    <section>
+      <h2> Lógica</h2>
+      <div class="card">
+        <p>Controle com variáveis:</p>
+
+        <pre><code>
+let ativo = false;
+
+if (ativo === false) {
+  // ação
+}
+        </code></pre>
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quebra-Cabeça Interativo</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <button class="back-button" type="button" onclick="goBack()">← Voltar</button>
+    <span class="page-title">Menu do Quebra-Cabeça</span>
+  </header>
+
+  <main class="container">
+
+    <section class="hero">
+      <p class="tag">Programação Website I</p>
+      <h1>Quebra-Cabeça Interativo</h1>
+      <p class="descricao">
+        Desbloqueie as páginas para acessar 🚀
+      </p>
+    </section>
+
+    <section class="area-projeto">
+
+      <div class="contador-box">
+        <h2>Peças ativadas: <span id="contador">0</span>/4</h2>
+
+        <!-- MENSAGEM FINAL -->
+        <p id="mensagemFinal" style="text-align:center; margin-top:20px; font-weight:bold;"></p>
+
+        <!-- 🔄 BOTÃO RESET (ADICIONADO AQUI) -->
+        <button id="reset" style="
+          margin-top:15px;
+          padding:10px 15px;
+          border:none;
+          border-radius:10px;
+          background: linear-gradient(135deg, #22c55e, #16a34a);
+          color:white;
+          font-weight:bold;
+          cursor:pointer;
+        ">
+          🔄 Resetar
+        </button>
+
+      </div>
+
+      <div class="grid-pecas">
+
+        <!-- PEÇA 1 -->
+        <div class="peca bloqueada">
+          <span class="icone">🔒</span>
+          <h3>Página 1</h3>
+          <p class="texto">Clique para desbloquear</p>
+
+          <a href="aula.html" target="_blank">
+            <button class="btn-abrir">Ir para página</button>
+          </a>
+        </div>
+
+        <!-- PEÇA 2 -->
+        <div class="peca bloqueada">
+          <span class="icone">🔒</span>
+          <h3>Página 2</h3>
+          <p class="texto">Clique para desbloquear</p>
+
+          <a href="aula2.html" target="_blank">
+            <button class="btn-abrir">Ir para página</button>
+          </a>
+        </div>
+
+        <!-- PEÇA 3 -->
+        <div class="peca bloqueada">
+          <span class="icone">🔒</span>
+          <h3>Página 3</h3>
+          <p class="texto">Clique para desbloquear</p>
+          <button class="btn-abrir">Ir para página</button>
+        </div>
+
+        <!-- PEÇA 4 -->
+        <div class="peca bloqueada">
+          <span class="icone">🔒</span>
+          <h3>Página 4</h3>
+          <p class="texto">Clique para desbloquear</p>
+          <button class="btn-abrir">Ir para página</button>
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <script src="js/java.js"></script>
+  <script>
+    function goBack() {
+      if (history.length > 1) {
+        history.back();
+      } else {
+        window.location.href = 'index.html';
+      }
+    }
+  </script>
+</body>
+</html>

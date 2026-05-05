@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aula 2 - Frontend Inteligente</title>
+
+  <link rel="stylesheet" href="../css/aula.css">
+</head>
+<body>
+
+  <header class="topbar">
+    <a class="back-button" href="index.html">← Voltar</a>
+    <span class="page-title">Aula 2: Frontend Inteligente</span>
+  </header>
+
+  <main class="container">
+
+    <h1>Frontend Inteligente com JavaScript</h1>
+
+    <section>
+      <h2>🎯 Objetivo</h2>
+      <div class="card">
+        <p>Nesta aula, você vai evoluir o projeto aprendendo a trabalhar com múltiplos elementos e estados dinâmicos.</p>
+        <p>Também vai entender como o JavaScript pode controlar o comportamento visual da interface.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🧠 Revisão</h2>
+      <div class="card">
+        <p>O DOM representa a estrutura da página no navegador.</p>
+        <p>Com JavaScript, conseguimos acessar e modificar elementos.</p>
+        <p>Eventos permitem reagir às ações do usuário.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🚀 Manipulação de Classes</h2>
+      <div class="card">
+        <p>Podemos alterar o estilo de um elemento usando classes.</p>
+
+<pre><code>
+elemento.classList.add("ativa");
+elemento.classList.remove("ativa");
+elemento.classList.toggle("ativa");
+</code></pre>
+
+        <p>O <strong>toggle</strong> alterna automaticamente o estado.</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>🧠 Estado Dinâmico</h2>
+      <div class="card">
+        <p>Agora não precisamos mais de variáveis separadas.</p>
+        <p>O próprio elemento indica seu estado.</p>
+
+<pre><code>
+if (elemento.classList.contains("ativa")) {
+  // está ativo
+}
+</code></pre>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>📦 Trabalhando com Vários Elementos</h2>
+      <div class="card">
+        <p>Podemos selecionar vários elementos ao mesmo tempo:</p>
+
+<pre><code>
+const pecas = document.querySelectorAll(".peca");
+</code></pre>
+
+        <p>Depois percorremos todos com:</p>
+
+<pre><code>
+pecas.forEach(function(peca) {
+  // código aqui
+});
+</code></pre>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>🖱️ Eventos em Múltiplos Elementos</h2>
+      <div class="card">
+        <p>Cada peça pode reagir ao clique:</p>
+
+<pre><code>
+pecas.forEach(function(peca) {
+
+  peca.addEventListener("click", function() {
+    // ação ao clicar
+  });
+
+});
+</code></pre>
+
+      </div>
+    </section>
+
+    <section>
+      <h2>🧩 Evolução do Projeto</h2>
+      <div class="card">
+        <p>Agora o sistema fica mais avançado:</p>
+        <p>• várias peças funcionando ao mesmo tempo</p>
+        <p>• interação direta</p>
+        <p>• mudança visual dinâmica</p>
+      </div>
+    </section>
+
+    <section>
+      <h2>💻 Exemplo Completo</h2>
+      <div class="card">
+
+<pre><code>
+// Seleciona todas as peças
+const pecas = document.querySelectorAll(".peca");
+
+// Seleciona contador
+const contador = document.getElementById("contador");
+
+// Função contador
+function atualizar() {
+  const ativas = document.querySelectorAll(".peca.ativa");
+  contador.innerText = ativas.length;
+}
+
+// Evento
+pecas.forEach(function(peca) {
+
+  peca.addEventListener("click", function() {
+
+    peca.classList.toggle("ativa");
+    peca.classList.toggle("bloqueada");
+
+    const icone = peca.querySelector(".icone");
+    const texto = peca.querySelector("p");
+
+    if (peca.classList.contains("ativa")) {
+      icone.innerText = "🧩";
+      texto.innerText = "Peça ativada";
+    } else {
+      icone.innerText = "🔒";
+      texto.innerText = "Clique para ativar";
+    }
+
+    atualizar();
+
+  });
+
+});
+</code></pre>
+
+      </div>
+    </section>
+
+  </main>
+
+</body>
+</html>
