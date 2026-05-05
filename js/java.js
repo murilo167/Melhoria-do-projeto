@@ -95,4 +95,4 @@ if (botaoReset) {
     mensagemFinal.textContent = "";
 
   });
-}
+} 
